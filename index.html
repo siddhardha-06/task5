@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rock_paper_scissor.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <h1 class="title">ROCK PAPER SCISSOR</h1>
+            <div class="score">
+                <div class="item">
+                    <div class="label">Wins</div>
+                    <div id="win" class="num">0</div>
+                </div>
+                <div class="item">
+                    <div class="label">Lost</div>
+                    <div id="lost" class="num">0</div>
+                </div>
+                <div class="item">
+                    <div class="label">Tie</div>
+                    <div id="tie" class="num">0</div>
+                </div>
+            </div>
+
+            <div class="result" style="margin-bottom:10px">
+                <div>
+                    <div class="label">Your</div>
+                    <div id="your" class="choice">—</div>
+                </div>
+                <div style="text-align:center">
+                    <div class="label">Result</div>
+                    <div id="result" class="resultText">—</div>
+                </div>
+                <div style="text-align:right">
+                    <div class="label">Robo</div>
+                    <div id="robo" class="choice">—</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn" onclick="play(1)" aria-label="Rock">✊ Rock</button>
+                <button class="btn" onclick="play(2)" aria-label="Paper">✋ Paper</button>
+                <button class="btn" onclick="play(3)" aria-label="Scissors">✌️ Scissors</button>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                <button class="reset" onclick="restart()">Reset</button>
+                <div style="color:var(--muted);font-size:13px">Tip: click a symbol to play</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="rock_paper_scissor.js"></script>
+</body>
+</html>

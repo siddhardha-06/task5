@@ -1,0 +1,161 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --accent: #3b82f6;
+    --muted: #6b7280;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Segoe UI, system-ui, -apple-system, 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    background: var(--bg);
+    color: #111;
+    overflow-x: hidden;
+}
+
+.wrap {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(16, 24, 40, 0.08);
+    padding: 20px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.title {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.score {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.score .item {
+    flex: 1;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #eef2ff;
+}
+
+.score .num {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 18px 0;
+}
+
+.btn {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e6edf8;
+    background: linear-gradient(180deg, #fff, #f7fbff);
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.12);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.choices {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.choice {
+    font-size: 34px;
+}
+
+.label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.resultText {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.reset {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (max-width: 420px) {
+    .score {
+        flex-direction: column;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+}
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+    .wrap { padding: 12px; }
+    .card { padding: 16px; margin: 0 6px; }
+    .score { gap: 8px; margin-bottom: 12px; }
+    .score .item { padding: 8px; }
+    .score .num { font-size: 16px; }
+    .controls { gap: 8px; flex-wrap: wrap; }
+    .btn { padding: 10px 12px; font-size: 15px; }
+    .choice { font-size: 28px; }
+    .resultText { font-size: 16px; }
+    .label { font-size: 12px; }
+    .reset { font-size: 13px; }
+    img { max-width: 100%; height: auto; display: block; }
+    .title { font-size: 18px; }
+}
